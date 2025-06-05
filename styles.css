@@ -177,9 +177,9 @@ section {
 }
 
 .about-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .stat {
@@ -189,6 +189,7 @@ section {
     border-radius: 12px;
     transition: var(--transition);
     border: 1px solid rgba(57, 255, 20, 0.2);
+    width: 100%;
 }
 
 .stat:hover {
