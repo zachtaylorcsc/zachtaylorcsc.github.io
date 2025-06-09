@@ -36,20 +36,19 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
+        //Get form data
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
         
-        // Here you would typically send the data to a server
         console.log('Form submitted:', data);
         
-        // Show success message
+        //Show success message
         alert('Thank you for your message! I will get back to you soon.');
         this.reset();
     });
 }
 
-// Add animation on scroll
+//Add animation on scroll
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -65,19 +64,20 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections
+//Observe all sections
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Dynamic year in footer
+//Dynamic year in footer
 document.querySelector('footer p').innerHTML = 
-    `&copy; ${new Date().getFullYear()} Your Name. All rights reserved.`;
+    `&copy; ${new Date().getFullYear()} Zach Taylor. All rights reserved.`;
 
 // Add project cards dynamically
 const projectsGrid = document.querySelector('.projects-grid');
 const projects = [
     {
+        //Will add more soon
         title: 'Project 1',
         description: 'A brief description of your first project. What technologies did you use? What problems did you solve?',
         image: 'https://via.placeholder.com/300x200',
@@ -85,16 +85,6 @@ const projects = [
         links: {
             github: 'https://github.com/yourusername/project1',
             live: 'https://project1.example.com'
-        }
-    },
-    {
-        title: 'Project 2',
-        description: 'Description of your second project. Highlight your role and the impact of the project.',
-        image: 'https://via.placeholder.com/300x200',
-        tags: ['Python', 'Django', 'PostgreSQL'],
-        links: {
-            github: 'https://github.com/yourusername/project2',
-            live: 'https://project2.example.com'
         }
     },
     // Add more projects as needed
