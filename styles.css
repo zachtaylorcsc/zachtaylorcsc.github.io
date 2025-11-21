@@ -77,11 +77,25 @@ body {
     justify-content: center;
     padding: 2rem;
     background: linear-gradient(135deg, rgba(0, 255, 0, 0.1) 0%, var(--bg-color) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.dotted-surface-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-content {
     text-align: center;
     max-width: 800px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
